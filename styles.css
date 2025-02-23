@@ -1,16 +1,72 @@
 /* Custom property/variables */
+
 :root {
-    --main-blue: #7fffd4;
-    --main-blue1: #70e1bc;
-    --main-white:#f0f0f0;
-    --main-gray:#303841;
+    --main-blue: #55ba98;
+    --main-blue1: #4ba285;
+    --main-white: #f0f0f0;
+    --main-gray: #303841;
 }
 
 /* Base reset */
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
+
+/* Box sizing and fot sizing */
+
+*,
+*::before,
+::after {
+    box-sizing: inherit;
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+@media (max-width: 28.75em) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* Base styles*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    /*18px*/
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
 
 nav {
     display: flex;
@@ -29,12 +85,12 @@ nav {
     margin-right: 2rem;
 }
 
-@media (max-width:28.75em){
-    .nav{
+@media (max-width:28.75em) {
+    .nav {
         justify-content: center;
     }
 
-    .nav-list{
+    .nav-list {
         margin: 0 1rem;
     }
 
@@ -46,6 +102,6 @@ nav {
     padding: 2rem;
 }
 
-.nav-list a:hover{
+.nav-list a:hover {
     background: var(--main-blue1);
 }
